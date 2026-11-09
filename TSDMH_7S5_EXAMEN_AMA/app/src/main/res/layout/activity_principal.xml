@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    tools:context=".PrincipalActivity">
+
+    <!-- Encabezado -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TaskOptimizer - Examen Parcial"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <!-- CONTENEDOR DE SOLICITUD Y CONTROLES -->
+    <LinearLayout
+        android:id="@+id/layoutControles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccione una Categoría:"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listo para iniciar"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:max="100"/>
+
+        <TextView
+            android:id="@+id/tvPorcentaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnIniciar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SOLICITAR DATOS"
+            android:layout_marginTop="24dp"/>
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:enabled="false"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- CONTENEDOR DE RESULTADOS (Inicialmente oculto) -->
+    <LinearLayout
+        android:id="@+id/layoutResultados"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:paddingTop="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FRAGMENTO / PANEL DE DETALLE"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvResultadoDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esperando resultados..."
+            android:textSize="15sp"
+            android:padding="16dp"
+            android:background="#ECEFF1"/>
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volver a Controles"
+            android:layout_marginTop="32dp"/>
+    </LinearLayout>
+
+</LinearLayout>
